@@ -20,4 +20,4 @@ spec:
     enabled: true
   sharing:
     enabled: false
-  version: drift-3
+  version: drift-4
