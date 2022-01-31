@@ -9,6 +9,9 @@ spec:
     options: {}
     type: Yaml
   drift:
-    enabled: false
+    action: Deny
+    enabled: true
   namespace: vijayns1
-  placement: {}
+  placement:
+    selector: rafay.dev/clusterName=vijaymks
+  version: vijaywl6-v1
