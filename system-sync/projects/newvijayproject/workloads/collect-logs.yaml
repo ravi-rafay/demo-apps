@@ -5,10 +5,13 @@ metadata:
   project: newvijayproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/collect-logs/collect-logs.yaml
     options: {}
     type: Yaml
   drift:
     enabled: false
   namespace: vijayns1
-  placement: {}
+  placement:
+    selector: rafay.dev/clusterName=vijaymks
