@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: vijaywl6
+  project: newvijayproject
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement: {}
