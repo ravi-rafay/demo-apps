@@ -13,4 +13,3 @@ spec:
   namespace: vijayns1
   placement:
     selector: rafay.dev/clusterName=vijaymks
-  version: log-workload-v2
