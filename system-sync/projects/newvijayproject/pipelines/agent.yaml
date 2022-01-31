@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: agent
+  project: newvijayproject
+spec:
+  active: false
+  sharing:
+    enabled: false

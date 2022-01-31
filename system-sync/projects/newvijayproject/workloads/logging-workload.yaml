@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: logging-workload
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/logging-workload/logging-workload.yaml
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks

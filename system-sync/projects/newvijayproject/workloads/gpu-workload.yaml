@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: gpu-workload
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      chartName: deployments/gpu-operator/Chart.yaml
+      repository: gpu-repo
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks

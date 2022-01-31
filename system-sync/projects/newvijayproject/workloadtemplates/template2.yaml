@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: template2
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/template2/nginx.yaml
+    options: {}
+    type: Yaml

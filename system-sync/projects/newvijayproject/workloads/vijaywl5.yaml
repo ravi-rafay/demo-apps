@@ -1,0 +1,23 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: vijaywl5
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: Helm/webserver/Chart.yaml
+      repository: vijaygit
+      revision: master
+      valuesPaths:
+      - name: Helm/webserver/values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks

@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: vijay-custom-addon
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      configmap:
+        name: file://artifacts/vijay-custom-addon/alertmanager-configMap.yaml
+      configuration:
+        name: file://artifacts/vijay-custom-addon/alertmanager-configuration.yaml
+      secret:
+        name: file://artifacts/vijay-custom-addon/alertmanager-secret.yaml
+      statefulset:
+        name: file://artifacts/vijay-custom-addon/alertmanager-statefulSet.yaml
+    type: AlertManager
+  sharing:
+    enabled: false
+  version: custom-alert-mgr

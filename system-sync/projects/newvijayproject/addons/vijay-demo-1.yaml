@@ -1,0 +1,13 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: vijay-demo-1
+  project: newvijayproject
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  namespace: vijayns1
+  sharing:
+    enabled: false

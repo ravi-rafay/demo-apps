@@ -1,0 +1,10 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: InfraProvisioner
+metadata:
+  name: vijay-provisioner
+  project: newvijayproject
+spec:
+  config: null
+  repository: vijaygit
+  revision: master
+  type: Terraform

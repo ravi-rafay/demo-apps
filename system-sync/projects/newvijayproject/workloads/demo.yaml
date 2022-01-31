@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: demo
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/demo/demo.yaml
+    options: {}
+    type: Yaml
+  drift:
+    action: Notify
+    enabled: true
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks
+  version: demo-v1

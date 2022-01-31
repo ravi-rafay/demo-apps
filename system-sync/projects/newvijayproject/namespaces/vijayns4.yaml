@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: vijayns4
+  project: newvijayproject
+spec:
+  artifact:
+    path:
+      name: K8sYaml/helloapp.yaml
+    repository: vijaygit
+    revision: master
+  drift:
+    enabled: false
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vijaymks
+  resourceQuotas: {}

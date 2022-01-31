@@ -1,0 +1,11 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: vijaywl2
+  project: newvijayproject
+spec:
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks

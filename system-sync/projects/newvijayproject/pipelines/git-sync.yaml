@@ -1,0 +1,33 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: git-sync
+  project: newvijayproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      approvers:
+      - userName: vijay@rafay.co
+      timeout: 0s
+      type: Email
+    name: approval
+    next:
+    - name: sync
+    type: Approval
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: system-sync
+        repository: vijaygit
+        revision: master
+      systemToGitSync: true
+    name: sync
+    type: SystemSync

@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: p1-t1
+  project: newvijayproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      namespace: vijayns2
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: vijaymks
+      workloadTemplate: template1
+    name: Deploy
+    type: DeployWorkloadTemplate

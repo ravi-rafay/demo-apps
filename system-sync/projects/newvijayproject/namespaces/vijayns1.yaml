@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: vijayns1
+  project: newvijayproject
+spec:
+  drift:
+    enabled: false
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vijay-eks
+    - key: rafay.dev/clusterName
+      value: vijay-import
+  resourceQuotas: {}

@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: vault-tls-certs
+  project: newvijayproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/vault-tls-certs/vault-tls-certs.yaml
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: vijayns1
+  placement:
+    selector: rafay.dev/clusterName=vijaymks
+  version: vault-tls-certs-v1

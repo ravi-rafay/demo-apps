@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: vijayns3
+  project: newvijayproject
+spec:
+  artifact:
+    path:
+      name: file://artifacts/vijayns3/vijayns3.yaml
+  drift:
+    enabled: false
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vijaymks
+  resourceQuotas: {}

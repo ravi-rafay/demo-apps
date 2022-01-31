@@ -1,0 +1,163 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webapp
+  namespace: k8s-workshop
+data:
+  app.dependency.url: 'https://test.dependency.foo.bar/api/v1/'
+  app.dependency.require_tls: truex
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+  name: webapp
+  namespace: k8s-workshop
+spec:
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/os
+                    operator: In
+                    values:
+                      - linux
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: webapp
+          image: quay.io/fairwinds/k8s-workshop:latest
+          command: ["ruby", "app/app.rb"]
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            failureThreshold: 1
+            httpGet:
+              path: /
+              port: 8080
+              scheme: HTTP
+          ports:
+          - containerPort: 8080
+            name: http
+          volumeMounts:
+            - name: secrets
+              mountPath: "/etc/secrets"
+          env:
+            - name: REDIS_HOST
+              value: 'redis-primary'
+            - name: REDIS_PORT
+              value: '6379'
+            # - name: CHAOS
+            #   value: true
+            - name: SECRET1
+              valueFrom:
+                secretKeyRef:
+                  name: webapp
+                  key: val1
+            - name: DEPENDENCY_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: webapp
+                  key: app.dependency.url
+            - name: DEPENDENCY_REQUIRE_TLS
+              valueFrom:
+                configMapKeyRef:
+                  name: webapp
+                  key: app.dependency.require_tls
+          resources:
+            limits:
+              cpu: 200m
+              memory: 300Mi
+            requests:
+              cpu: 200m
+              memory: 300Mi
+      volumes:
+        - name: secrets
+          secret:
+            secretName: webapp
+            items:
+            - key: val2
+              path: secret_file
+              mode: 511
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: webapp
+  namespace: k8s-workshop
+spec:
+  minReplicas: 1
+  maxReplicas: 50
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: webapp
+  targetCPUUtilizationPercentage: 30
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: app
+  namespace: k8s-workshop
+spec:
+  podSelector:
+    matchLabels:
+      app: webapp
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+    ports:
+    - protocol: TCP
+      port: 8080
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: webapp
+  namespace: k8s-workshop
+type: Opaque
+data:
+  val1: aXRfaXNfYV9zZWNyZXRfdG9fZXZlcnlib2R5
+  val2: ZW5lbWllcz1hbGllbnMKbGl2ZXM9MwplbmVtaWVzLmNoZWF0PXRydWUKZW5lbWllcy5jaGVhdC5sZXZlbD1ub0dvb2RSb3R0ZW4Kc2VjcmV0LmNvZGUucGFzc3BocmFzZT1VVURETFJMUkJBQkFTCnNlY3JldC5jb2RlLmFsbG93ZWQ9dHJ1ZQpzZWNyZXQuY29kZS5saXZlcz0zMAoK
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  namespace: k8s-workshop
+  labels:
+    app: webapp
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http
+  selector:
+    app: webapp
+---
