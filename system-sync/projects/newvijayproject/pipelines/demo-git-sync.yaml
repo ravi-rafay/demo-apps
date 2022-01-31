@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: demo-git-sync
+  project: newvijayproject
+spec:
+  active: false
+  sharing:
+    enabled: false
