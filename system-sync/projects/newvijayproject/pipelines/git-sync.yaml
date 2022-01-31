@@ -31,3 +31,13 @@ spec:
       systemToGitSync: true
     name: sync
     type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: system-sync
+        provider: Github
+        repository: vijaygit
+        revision: master
+    name: sync-system
+    type: Webhook
