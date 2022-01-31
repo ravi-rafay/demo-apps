@@ -9,15 +9,6 @@ spec:
     enabled: false
   stages:
   - config:
-      approvers:
-      - userName: vijay@rafay.co
-      timeout: 0s
-      type: Email
-    name: approval
-    next:
-    - name: sync
-    type: Approval
-  - config:
       destinationRepo: {}
       excludedResources:
       - name: InfraProvisioner
