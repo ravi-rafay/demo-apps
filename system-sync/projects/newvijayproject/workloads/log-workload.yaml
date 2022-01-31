@@ -11,4 +11,6 @@ spec:
   drift:
     enabled: false
   namespace: vijayns1
-  placement: {}
+  placement:
+    selector: rafay.dev/clusterName=vijaymks
+  version: log-workload-v1
