@@ -4,6 +4,6 @@ metadata:
   name: demo-git-sync
   project: newvijayproject
 spec:
-  active: false
+  active: true
   sharing:
     enabled: false
