@@ -1,7 +1,7 @@
 apiVersion: gitops.k8smgmt.io/v3
 kind: Pipeline
 metadata:
-  name: demonew
+  name: demo
   project: defaultproject
 spec:
   active: true
