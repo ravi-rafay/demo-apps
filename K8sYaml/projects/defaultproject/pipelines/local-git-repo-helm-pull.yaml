@@ -1,0 +1,30 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: local-git-repo-helm-pull
+  project: defaultproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      namespace: vijay-ns
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: vijay-role-aws
+      useRevisionFromWebhookTriggerEvent: true
+      workloadTemplate: git-pull-helm-local-repo
+    name: deploy
+    type: DeployWorkloadTemplate
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: Helm/values.yaml
+        provider: Github
+        repository: vijay-repo
+        revision: master
+    name: helm-pull-from-git-repo
+    type: Webhook

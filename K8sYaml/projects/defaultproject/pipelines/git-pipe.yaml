@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: git-pipe
+  project: defaultproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      namespace: vijay-ns
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: vijay-role-aws
+      workloadTemplate: git-pull
+    name: workload-deploy
+    type: DeployWorkloadTemplate

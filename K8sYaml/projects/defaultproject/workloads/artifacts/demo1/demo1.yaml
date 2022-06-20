@@ -1,0 +1,172 @@
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURmekNDQW1jQ0FnUG9NQTBHQ1NxR1NJYjNEUUVCQ3dVQU1JR0RNUXN3Q1FZRFZRUUdFd0pWVXpFVE1CRUcKQTFVRUNBd0tRMkZzYVdadmNtNXBZVEVTTUJBR0ExVUVCd3dKVTNWdWJubDJZV3hsTVE0d0RBWURWUVFLREFWUwpZV1poZVRFT01Bd0dBMVVFQ3d3RlVtRm1ZWGt4S3pBcEJnTlZCQU1NSW5acGFtRjVkR1Z6ZEM1emFXMW9ZUzVrClpYWXVjbUZtWVhrdFpXUm5aUzV1WlhRd0lCY05Nakl3TmpFM01URTBOVEUyV2hnUE1qQTFNakEyTURreE1UUTEKTVRaYU1JR0RNUXN3Q1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0F3S1EyRnNhV1p2Y201cFlURVNNQkFHQTFVRQpCd3dKVTNWdWJubDJZV3hsTVE0d0RBWURWUVFLREFWU1lXWmhlVEVPTUF3R0ExVUVDd3dGVW1GbVlYa3hLekFwCkJnTlZCQU1NSW5acGFtRjVkR1Z6ZEM1emFXMW9ZUzVrWlhZdWNtRm1ZWGt0WldSblpTNXVaWFF3Z2dFaU1BMEcKQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUNyTlg1bTVqRzZ5M25laStWaXVHdUIzUmlPU2NkYgpHU094eUw0d0tjWDRQUnZueU0ya2p0d2V3YmRYODNJbTBqWG12Qk82dzh4c1pOZThBK2JrSkg4L1VGcnRpSUZHClhVZTVycXFYS3o5QTNUZnltbmpoUGxHcGM3SnZtL0xEMWpDOXJwS3VkTW9pVTU3VE9xRy9senB0SmhYejBSeGQKcFhuUVVmTkFEMlFobzdkNlRzQjZ5QlJJSG5YejJReGZyRk9BWW1FSzZXN1VoMnUzVEhLVDhpMVkraVEzdFdsUwppbzc0SmtsWXprMDUyRkE5OGwxQlNRY05RSlF0TEIxUE4wV2RkMkdndjgxZlkzQmZpVURhZmt1M1V2RUNkYjZaCnRzU1NhV0VVeHZ1WUl2UEFEL0FMU2phNjVrdHVBL1ZkZmk2YkN3WVpHUWwrd1o5TzBsSHdSTVdGQWdNQkFBRXcKRFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUgvbGRBbWNOZ0JocFNiSzBvaW13Y0QrK0luQjFhc010dDAyYjZ1cwpSR3BlOFc5Y3B4Q0VoZ0FkaGJNZ0kvT3BlaDNiSnpIUWgwVzk2UWZPVTVsdWVBMU54bGYwd1JBMmJvMS90YmxqCkg2Y1pUVmdqQ0c0WFQ3TzQ1NjZIU21qd0o2VVJmd3VZRFRteUlEL2VmTTEwOWJQS003NmR0MU0wVjFqcUlkaXYKVTRIcnphS3JNdFFMVHZxM3ZyN0hPei9odXRPZ2hBUkw0RmF3OEhYSm56UnIwR1N4UUs0NGgzMnJQT1ZhQ2lSZQpabGhvd3UvSFFGM1dTelM2VndXT1VvOE5WUEhjWGw1Tm9rTzBjUkFVRVFuYy9jbmlVQXdXRGl0SDEwekF3YitLClhOT25WbURCLzgxQW0rZW1Nejk2K3dwVmNqemo2QkJlSjdDQVYwdU1wNUF1Y1lzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  tls.key: c2VjcmV0c3RvcmU6cmttczotLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS0KTUlJRXZBSUJBREFOQmdrcWhraUc5dzBCQVFFRkFBU0NCS1l3Z2dTaUFnRUFBb0lCQVFDck5YNW01akc2eTNuZQppK1ZpdUd1QjNSaU9TY2RiR1NPeHlMNHdLY1g0UFJ2bnlNMmtqdHdld2JkWDgzSW0walhtdkJPNnc4eHNaTmU4CkErYmtKSDgvVUZydGlJRkdYVWU1cnFxWEt6OUEzVGZ5bW5qaFBsR3BjN0p2bS9MRDFqQzlycEt1ZE1vaVU1N1QKT3FHL2x6cHRKaFh6MFJ4ZHBYblFVZk5BRDJRaG83ZDZUc0I2eUJSSUhuWHoyUXhmckZPQVltRUs2VzdVaDJ1MwpUSEtUOGkxWStpUTN0V2xTaW83NEprbFl6azA1MkZBOThsMUJTUWNOUUpRdExCMVBOMFdkZDJHZ3Y4MWZZM0JmCmlVRGFma3UzVXZFQ2RiNlp0c1NTYVdFVXh2dVlJdlBBRC9BTFNqYTY1a3R1QS9WZGZpNmJDd1laR1FsK3daOU8KMGxId1JNV0ZBZ01CQUFFQ2dnRUFGRTIzdThRNHlZb3YzYkNCZDMrZllEczBHa3V0bEtRYWs0N1czeWRWRHVkUQpVK0NBWXE5K2N6ZE40dVEvK1ZLY2ljeHNHbzMxeERVQlVJNjE1d0JkQnNra3YxNmMxaGRoMWlkY202akpTNHZ3CmdwakhGUThxNkFtTWM2ZnUxa0trYlJveTB2V09zeHR2am1VNW9WcngxdGZaYXB5MTNIVXZTUUV1ODczZmhnMk8KaGJRaEk4QlNIUFo1c2lXM2FuMU1Bb01PQ1U1WUNYRmkwSm9ZamYveUxBWXVuTG8vTmIyR3RQOEEzdnpuanRENQppUnBYYkxSNmkrZlBMSUhoOE5XYWxYZElXRlpaZWl3angwblF4MWZlc0FQLzZvRU1MTEhBN0JJY25MS3NKblFoCmF4RjNZU0NPZ3ZaNVh6U0pmemVZWGhIWm9EQmJpU1BsTVBNVlFLdjMwUUtCZ1FEZmhDM0R2SWxrTjZINkdhcU4KUFpEMmNLU21IaUN6VlBzVkhxa0FhbFNsR0tsbytyNnZZSGRiMnJkT05xSklWbEx3UVJYemtLejFyNXEybWxBMgpnUkhVMnF3KzBLb1NKcjRJbm1Nb2tuY05PWXdQUmg3VnZxdWtLQWlQWERKVjNEcW1hK0g3YW9tdXNNcnE3a2VYClhqbHR3ZnAwd3QrTHZCWU5nMTl5Q1ZPa2R3S0JnUURFRno1b0lKNG1FeG9iWXhndHM2dzJNemJMZzZHT2s2anIKcld6K053bXlpNnJsa1VJNVdtYVYrdHQ4VWM4TVJyY0k5Z09HMXRKZ0pJVTRlV1U5emtzQ2d6bmgzc0N3aUN4QwpGMlZWeGRVOTk5TkUzV0RWc1p2ZlJMcGo0R1RzbE1SV1VJYncvREV4bjcrSVhZeGluZDJhVWhNVXd0dHRYNXZ5CkZHNlYvdUdRNHdLQmdCcnJXMnVvaUUrR2w3NThXdHNaNEJ5ZUltWlRXSkxnbUVESjZZYkFSNk4rbmVDajJsVmEKNCtVdktVYUZNL1JNV1Q3UVIrbUdzaDRBNFR3K3g0eFk3U0hhbUVZVWNYY3dMVkR5YW5UWGR2a2p4aWVNeFdmdQp4OU5FY3d0NUNpTG5IRFV3NXcyVm5qRm8zM2Q5N1NkZzFML1FUZTdFRFpKUnU4SXk0VXJscnFvdkFvR0FROWhTCjlFNE15ZG1rRjhPeWN1V09lUFpCU0NyVDgvT3M1MVlLdHU0dUFjT0hMb1NTcUN0YUFSeFpZbXNmdXZ5Z2lZNHMKN0ROWmVJQktRNTdrNDN5RHdXdkwxQlZ4RCtNZGhRUjVRRE1Cczc0U0wrcDBmWnRFOWZ2ZWpYM3ZEVmZ2a25tcwpKcWJyRW1OV0xvVkhkRHR3bDlzNzFOd1NkWVkxKzQwTU1nT000Y2NDZ1lCOWxGS21CYVphTFBETUJhSVhZT1NyCmtnY29mODUyelpiVEhhSFJLZjFuVmJtL3NsZlNsUDhGelZZQmx0YjhOYjJnWjJqZEVpSms1aXRXTU14RjBYcVQKdGUyOG9aVXhiUXFndnNZSllPVC9vMlFQWXYxaitZWFRHSmZmVW0rWGMzUjJQVURTZjdMa3k3dmFyRFhqdDhWYgpHNzBFaFJFWlB3bE5xWmZHclRLUmtBPT0KLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLQo=
+kind: Secret
+metadata:
+  annotations:
+    rafay.dev/secretstore: rkms-secrets
+  labels:
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 7dkgjkx
+  name: 7dkgjkx-vijaytest--1411753543-ingress
+  namespace: test-ns
+type: kubernetes.io/tls
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    rep-container: 7dkgjkx-vijay-cont
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 7dkgjkx
+  name: vijay-cont
+  namespace: test-ns
+spec:
+  ports:
+  - name: port-80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    rep-app: vijay-cont
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    rafay.dev/registry-4qkolkn: public-docker-hub-registry
+  labels:
+    rep-app: vijay-cont
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-workload: 7dkgjkx
+  name: vijay-cont
+  namespace: test-ns
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 300
+  selector:
+    matchLabels:
+      rep-app: vijay-cont
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations: {}
+      labels:
+        rep-app: vijay-cont
+        rep-organization: 7w2lnkp
+        rep-partner: rx28oml
+        rep-workload: 7dkgjkx
+    spec:
+      containers:
+      - args: []
+        command: []
+        env: []
+        envFrom: []
+        image: index.docker.io/bitnami/solr:8.11.1-debian-10-r70
+        imagePullPolicy: IfNotPresent
+        name: vijay-cont
+        ports:
+        - containerPort: 80
+          name: port-80-tcp
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 8192Mi
+          requests:
+            cpu: 1900m
+            memory: 7782Mi
+      dnsPolicy: ClusterFirstWithHostNet
+      restartPolicy: Always
+      tolerations: []
+
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 7dkgjkx
+  name: vijay-cont
+  namespace: test-ns
+spec:
+  maxReplicas: 1
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: vijay-cont
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/configuration-snippet: set $workload_name "demo1";set
+      $workloadId "7dkgjkx";set $orgId "7w2lnkp";set $partnerId "rx28oml";
+    rafay.dev/cname: vijaytest-simha-dev-rafay-edge-net.Team Rafay
+    rafay.dev/kubeVersionConstraint: '>=1.19.0'
+  name: vijaytest-qasimplified-com
+  namespace: test-ns
+spec:
+  rules:
+  - host: vijaytest.simha.dev.rafay-edge.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: vijay-cont
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - vijaytest.simha.dev.rafay-edge.net
+    secretName: 7dkgjkx-vijaytest--1411753543-ingress
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/configuration-snippet: set $workload_name "demo1";set
+      $workloadId "7dkgjkx";set $orgId "7w2lnkp";set $partnerId "rx28oml";
+    rafay.dev/cname: vijaytest-simha-dev-rafay-edge-net.Team Rafay
+    rafay.dev/kubeVersionConstraint: <1.19.0
+  name: vijaytest-qasimplified-com
+  namespace: test-ns
+spec:
+  rules:
+  - host: vijaytest.simha.dev.rafay-edge.net
+    http:
+      paths:
+      - backend:
+          serviceName: vijay-cont
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - vijaytest.simha.dev.rafay-edge.net
+    secretName: 7dkgjkx-vijaytest--1411753543-ingress

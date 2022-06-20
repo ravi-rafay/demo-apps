@@ -1,0 +1,24 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rauto-pipeline-test-donot-delete
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: workloads/helm3/nginx_webserver/nginx-8.2.0-rafay.tgz
+      repository: rauto-git-repo
+      revision: rauto-pipeline-test
+      valuesPaths:
+      - name: workloads/helm3/nginx_webserver/nginx-values-pipeline.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  drift:
+    enabled: false
+  namespace: rauto-bootstrap-ns-669
+  placement:
+    selector: rafay.dev/clusterName in (automation-cluster-boot-eks-5409,gopi-rolebased-eks,gopi-eks-from-gke-113-15)
+  version: rauto-pipeline-test-donot-delete-v2

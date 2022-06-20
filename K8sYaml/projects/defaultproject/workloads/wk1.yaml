@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wk1
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wk1/wk1.yaml
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: test-ns
+  placement:
+    selector: rafay.dev/clusterName in (gopi-eks-from-gke-113-15,gopi-rolebased-eks)

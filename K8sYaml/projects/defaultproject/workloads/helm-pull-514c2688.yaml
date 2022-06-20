@@ -1,0 +1,25 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: helm-pull-514c2688
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartName: mysql
+      chartVersion: 9.1.6
+      repository: default-bitnami
+      valuesPaths:
+      - name: file://artifacts/helm-pull-514c2688/values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  drift:
+    enabled: false
+  namespace: vijay-ns
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: vijay-role-aws
+  version: helm-pull-514c2688-v2

@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: republish-yaml-workload-donot-delete
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/republish-yaml-workload-donot-delete/republish-yaml-workload-donot-delete.yaml
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: rauto-bootstrap-ns-669
+  placement:
+    selector: rafay.dev/clusterName in (automation-cluster-boot-eks-5409,gopi-rolebased-eks,gopi-eks-from-gke-113-15)
+  version: republish-yaml-workload-donot-delete-v2

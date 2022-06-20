@@ -1,0 +1,29 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rauto-cluster-override-test-blueprint
+  project: defaultproject
+spec:
+  base:
+    name: default
+    version: 1.13.0
+  customAddons:
+  - name: rauto-cluster-override-test-addon
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableLogging: true
+    enableMonitoring: true
+    enableVM: false
+  drift:
+    enabled: false
+  opaPolicy: {}
+  placement: {}
+  psp:
+    enabled: true
+    names:
+    - rafay-privileged-psp
+    scope: Cluster
+  sharing:
+    enabled: false
+  version: v1

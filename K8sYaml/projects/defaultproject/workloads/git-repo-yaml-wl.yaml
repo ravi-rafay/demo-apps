@@ -1,0 +1,20 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: git-repo-yaml-wl
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: K8sYaml/nginx.yaml
+      repository: vijay-repo
+      revision: master
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: vijay-ns
+  placement:
+    selector: rafay.dev/clusterName=vijay-role-aws
+  version: git-repo-yaml-wl-v3

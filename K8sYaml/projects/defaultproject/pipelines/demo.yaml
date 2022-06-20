@@ -1,0 +1,36 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: demo
+  project: defaultproject
+spec:
+  active: false
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: Blueprint
+      - name: Workload
+      - name: Pipeline
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: K8sYaml
+        repository: vijay-repo
+        revision: master
+      systemToGitSync: true
+    name: vijay-system-sync
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: K8sYaml/nginx.yaml
+        provider: Github
+        repository: vijay-repo
+        revision: master
+    name: vijay-system-sync-git
+    type: Webhook

@@ -1,0 +1,20 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: helm-pull
+  project: defaultproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      namespace: vijay-ns
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: vijay-role-aws
+      useRevisionFromWebhookTriggerEvent: true
+      workloadTemplate: helm-pull
+    name: deploy
+    type: DeployWorkloadTemplate

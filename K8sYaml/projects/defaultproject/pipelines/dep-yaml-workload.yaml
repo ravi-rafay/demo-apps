@@ -1,0 +1,25 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: dep-yaml-workload
+  project: defaultproject
+spec:
+  active: true
+  sharing:
+    enabled: false
+  stages:
+  - config:
+      useRevisionFromWebhookTriggerEvent: true
+      workload: git-repo-yaml-wl
+    name: deploy
+    type: DeployWorkload
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: K8sYaml/nginx.yaml
+        provider: Github
+        repository: vijay-repo
+        revision: master
+    name: deploy-yaml-wl
+    type: Webhook
