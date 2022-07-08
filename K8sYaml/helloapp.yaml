@@ -16,7 +16,7 @@ spec:
         tier: web
     spec:
       containers:
-      - name: hello-app-testing
+      - name: hello-app-demo-changed
         image: gcr.io/google-samples/hello-app:1.0
         ports:
         - containerPort: 8080
