@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workloadrauto-429468393
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/workloadrauto-429468393/wordpress-12.1.0.tgz
+      valuesPaths:
+      - name: file://artifacts/workloadrauto-429468393/helmworkload1942.yaml
+    type: Helm
+  namespace: rauto-ns-429468393
+  placement:
+    selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
+  version: workloadrauto-429468393-v1-202307141720260000

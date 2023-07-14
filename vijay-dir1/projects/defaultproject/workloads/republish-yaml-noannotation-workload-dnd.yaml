@@ -12,4 +12,4 @@ spec:
   namespace: rauto-bootstrap-ns-164
   placement:
     selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
-  version: republish-yaml-noannotation-workload-dnd-v2-202307121732360000
+  version: republish-yaml-noannotation-workload-dnd-v3-202307141719110000

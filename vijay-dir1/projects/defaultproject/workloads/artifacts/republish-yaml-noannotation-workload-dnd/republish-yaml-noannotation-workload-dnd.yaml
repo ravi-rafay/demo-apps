@@ -34,7 +34,7 @@ metadata:
   name: nginx-ingress
 spec:
   rules:
-  - host: automation-5728.qasimplified.com
+  - host: automation-9471.qasimplified.com
     http:
       paths:
       - path: /
