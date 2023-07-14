@@ -1,0 +1,13 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rauto-blueprint-41364
+  project: defaultproject
+spec:
+  base:
+    name: minimal
+    version: 1.27.0
+  namespaceConfig:
+    enableSync: true
+  type: custom
+  version: v1
