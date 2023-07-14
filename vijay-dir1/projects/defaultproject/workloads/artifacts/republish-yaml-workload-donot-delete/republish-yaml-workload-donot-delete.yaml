@@ -119,10 +119,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - automation-4076.qasimplified.com
+    - automation-5459.qasimplified.com
     secretName: cafe-ingress-secret
   rules:
-  - host: automation-4076.qasimplified.com
+  - host: automation-5459.qasimplified.com
     http:
       paths:
       - path: /tea
