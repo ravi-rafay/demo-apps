@@ -1,21 +1,15 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-cm-309359031
+  name: rauto-vpccm-594899633
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rauto_60420
+  cloudCredentials: rauto_6980
   config:
-    availabilityZones:
-    - us-east-1a
-    - us-east-1b
-    - us-east-1c
-    - us-east-1d
-    - us-east-1f
     managedNodeGroups:
-    - ami: ami-0b4795e99297c2650
+    - ami: ami-003237eb446483b5f
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -24,11 +18,11 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng2-309359031
-      overrideBootstrapCommand: null
+      name: rauto-ng1-594899633
+      overrideBootstrapCommand: '| [Ubuntu]'
       volumeSize: 80
       volumeType: gp2
-    - ami: ami-0b4795e99297c2650
+    - ami: ami-003237eb446483b5f
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -37,12 +31,12 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng1-309359031
-      overrideBootstrapCommand: null
+      name: rauto-ng2-594899633
+      overrideBootstrapCommand: '| [Ubuntu]'
       volumeSize: 80
       volumeType: gp2
     metadata:
-      name: rauto-cm-309359031
+      name: rauto-vpccm-594899633
       region: us-east-1
       tags:
         email: automation@rafay.co
@@ -52,11 +46,21 @@ spec:
       cni:
         name: aws-cni
     vpc:
-      cidr: 192.168.0.0/16
       clusterEndpoints:
         privateAccess: true
         publicAccess: false
       nat:
         gateway: Single
+      subnets:
+        private:
+          subnet-0205849a93dc1a7c8:
+            id: subnet-0205849a93dc1a7c8
+          subnet-0c1955c9a5c78d0d2:
+            id: subnet-0c1955c9a5c78d0d2
+        public:
+          subnet-07de918da939fb783:
+            id: subnet-07de918da939fb783
+          subnet-0d6857db67a6722ef:
+            id: subnet-0d6857db67a6722ef
   proxyConfig: {}
   type: aws-eks
