@@ -8,12 +8,29 @@ spec:
     name: default
   cloudCredentials: rauto_75691
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
     - us-east-1c
     - us-east-1d
     - us-east-1f
+    iam:
+      serviceAccounts:
+      - attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+        metadata:
+          annotations:
+            irsa: rauto-910418831
+          labels:
+            irsalabel: rauto-910418831
+          name: rauto-irsa-7787717
+          namespace: namespace-910418831
+        tags:
+          irsatag: rauto-910418831
+      withOIDC: true
     metadata:
       name: rauto-cm-412091237
       region: us-east-1

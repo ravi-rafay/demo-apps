@@ -10,7 +10,7 @@ spec:
   placement:
     labels:
     - key: rafay.dev/clusterName
-      value: rauto-eks-81025239
+      value: rauto-eks-134433130
   resource:
     selector:
       name: rauto-cluster-override-test-addon
