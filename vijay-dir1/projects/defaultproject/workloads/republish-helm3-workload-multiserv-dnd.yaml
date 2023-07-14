@@ -9,9 +9,9 @@ spec:
       chartPath:
         name: file://artifacts/republish-helm3-workload-multiserv-dnd/hpa-chart-0.1.0.tgz
       valuesPaths:
-      - name: file://artifacts/republish-helm3-workload-multiserv-dnd/helmworkload718.yaml
+      - name: file://artifacts/republish-helm3-workload-multiserv-dnd/helmworkload5201.yaml
     type: Helm
   namespace: rauto-bootstrap-ns-164
   placement:
     selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
-  version: republish-helm3-workload-multiserv-dnd-v4-202307121739510000
+  version: republish-helm3-workload-multiserv-dnd-v5-202307141722330000
