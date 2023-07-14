@@ -1,16 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-cm-692666863
+  name: rauto-cm-680933411
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rauto_30289
+  cloudCredentials: rauto_13644
   config:
-    addons:
-    - name: aws-ebs-csi-driver
-      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
@@ -18,17 +15,17 @@ spec:
     - us-east-1d
     - us-east-1f
     metadata:
-      name: rauto-cm-692666863
+      name: rauto-cm-680933411
       region: us-east-1
       tags:
         email: automation@rafay.co
         env: automation
-      version: "1.25"
+      version: "1.26"
     network:
       cni:
         name: aws-cni
     nodeGroups:
-    - ami: ami-003237eb446483b5f
+    - amiFamily: AmazonLinux2
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -37,21 +34,8 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng1-692666863
-      overrideBootstrapCommand: '| [Ubuntu]'
-      volumeSize: 80
-      volumeType: gp2
-    - ami: ami-003237eb446483b5f
-      desiredCapacity: 2
-      iam:
-        withAddonPolicies:
-          autoScaler: true
-          imageBuilder: true
-      instanceType: t3a.xlarge
-      maxSize: 2
-      minSize: 2
-      name: rauto-ng2-692666863
-      overrideBootstrapCommand: '| [Ubuntu]'
+      name: rauto-ng-680933411
+      version: "1.26"
       volumeSize: 80
       volumeType: gp2
     vpc:
