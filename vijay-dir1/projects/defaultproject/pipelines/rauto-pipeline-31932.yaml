@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: rauto-pipeline-31932
+  project: defaultproject
+spec:
+  stages:
+  - config:
+      workload: rauto-workload-31932
+    name: rauto-deployment-stage-31932
+    type: DeployWorkload

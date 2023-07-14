@@ -16,4 +16,4 @@ spec:
   namespace: rauto-namespace-31932
   placement:
     selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
-  version: rauto-workload-31932-v1-202307142107020000
+  version: rauto-workload-31932-v2-202307142107360000
