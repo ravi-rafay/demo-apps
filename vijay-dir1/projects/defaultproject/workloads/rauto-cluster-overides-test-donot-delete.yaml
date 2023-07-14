@@ -14,3 +14,4 @@ spec:
   namespace: rauto-bootstrap-ns-387
   placement:
     selector: rafay.dev/clusterName=automation-cluster-boot-eks-5788
+  version: rauto-cluster-overides-test-donot-delete-v4-202307141656370000
