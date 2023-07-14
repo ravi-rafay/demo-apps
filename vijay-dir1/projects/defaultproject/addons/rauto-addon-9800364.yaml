@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rauto-addon-9800364
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rauto-addon-9800364/rauto-addon-9800364.yaml
+    type: Yaml
+  namespace: default-gke-126
+  sharing: {}
+  version: v1

@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: newopenebs
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: openebs
+      chartVersion: 3.6.0
+    type: Helm
+  namespace: vijayns2
+  sharing: {}
+  version: newopenebs

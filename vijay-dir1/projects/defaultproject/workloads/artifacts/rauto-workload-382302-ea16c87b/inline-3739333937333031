@@ -1,0 +1,4 @@
+ingress:
+  enabled: true
+  certManager: false
+  hostname: rauto-template-382302.qasimplified.com

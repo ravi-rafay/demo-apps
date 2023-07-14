@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: harsha-openebs
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: openebs
+      chartVersion: 3.6.0
+      valuesPaths:
+      - name: file://artifacts/harsha-openebs/openebs-values.yaml
+    type: Helm
+  namespace: openebs
+  sharing: {}
+  version: v1

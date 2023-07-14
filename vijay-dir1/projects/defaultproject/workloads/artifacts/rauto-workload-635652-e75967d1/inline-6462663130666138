@@ -1,0 +1,8 @@
+service:
+  type: NodePort
+  port: 80
+  httpsPort: 443
+ingress:
+  enabled: true
+  certManager: false
+  hostname: rauto-template-635652.qasimplified.com

@@ -1,0 +1,12 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipe-1
+  project: defaultproject
+spec:
+  active: true
+  stages:
+  - config:
+      workload: vijay-wl-new
+    name: stage1
+    type: DeployWorkload

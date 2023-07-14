@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rauto-blueprint-5341969
+  project: defaultproject
+spec:
+  base:
+    name: default
+    version: 1.26.0
+  customAddons:
+  - name: rauto-addon-6847167
+    version: v1
+  - name: rauto-addon-2392927
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  type: custom
+  version: v1

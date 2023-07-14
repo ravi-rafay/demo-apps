@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: varun-addon
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/varun-addon/nginx.yaml
+    type: Yaml
+  namespace: varun-ns
+  sharing: {}
+  version: v1

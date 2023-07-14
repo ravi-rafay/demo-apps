@@ -1,0 +1,23 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rauto-workload-382302-ea16c87b
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/rauto-workload-382302-ea16c87b/nginx-9.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/rauto-workload-382302-ea16c87b/nginx-values.yaml
+      - name: file://artifacts/rauto-workload-382302-ea16c87b/inline-3739333937333031
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: rauto-namespace-382302
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: automation-cluster-boot-eks-5788
+  version: rauto-workload-382302-ea16c87b-v1-202307040849350000
