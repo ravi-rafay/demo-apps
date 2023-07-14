@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rauto-addon-helm-ranch-4153
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/rauto-addon-helm-ranch-4153/chartmuseum-3.4.0.tgz
+      valuesPaths:
+      - name: file://artifacts/rauto-addon-helm-ranch-4153/chartmuseum-values.yaml
+    type: Helm
+  namespace: default-gke-126
+  sharing: {}
+  version: v1

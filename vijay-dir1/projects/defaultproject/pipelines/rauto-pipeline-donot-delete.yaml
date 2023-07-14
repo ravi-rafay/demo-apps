@@ -6,6 +6,6 @@ metadata:
 spec:
   stages:
   - config:
-      workload: workloadrauto-95185
+      workload: workloadrauto-31910
     name: stage1
     type: DeployWorkload
