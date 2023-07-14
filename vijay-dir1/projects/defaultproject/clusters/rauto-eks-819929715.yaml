@@ -1,18 +1,15 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-eks-189304243
+  name: rauto-eks-819929715
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rauto_17505
+  cloudCredentials: rauto_40537
   config:
-    addons:
-    - name: aws-ebs-csi-driver
-      version: latest
     metadata:
-      name: rauto-eks-189304243
+      name: rauto-eks-819929715
       region: us-east-1
       tags:
         email: automation@rafay.co
@@ -31,7 +28,7 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-cluster-eks-ng
+      name: rauto-ng-819929715
       version: "1.25"
       volumeSize: 80
       volumeType: gp2
