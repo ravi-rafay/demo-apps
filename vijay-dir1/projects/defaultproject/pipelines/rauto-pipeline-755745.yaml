@@ -1,0 +1,35 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: rauto-pipeline-755745
+  project: defaultproject
+spec:
+  stages:
+  - config:
+      namespace: rauto-namespace-755745
+      overrides:
+      - template:
+          inline: |-
+            service:
+              type: NodePort
+              port: 80
+              httpsPort: 443
+            ingress:
+              enabled: true
+              certManager: false
+              hostname: rauto-template-755745.qasimplified.com
+        type: HelmValues
+      placement:
+        labels:
+        - key: rafay.dev/clusterName
+          value: automation-cluster-boot-eks-3326
+      workloadTemplate: rauto-workload-755745
+    name: rauto-deployment-stage-755745
+    preConditions:
+    - config: currentStage.name=="rauto-deployment-stage-755745"
+      type: Expression
+    type: DeployWorkloadTemplate
+    variables:
+    - name: rauto
+      type: Boolean
+      value: "true"
