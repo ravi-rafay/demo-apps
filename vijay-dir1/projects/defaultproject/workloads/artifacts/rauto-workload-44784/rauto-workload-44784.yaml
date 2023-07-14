@@ -1,0 +1,394 @@
+apiVersion: v1
+data:
+  WORKLOAD_ID: 1ky77gk
+kind: ConfigMap
+metadata:
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: 1ky77gk-cont-1-1ky-3721571733
+  namespace: ns-44784
+
+---
+apiVersion: v1
+data:
+  test_robot_env_1: c2VjcmV0c3RvcmU6cmttczplbnZfdmFsdWVfMQ==
+  test_robot_env_2: c2VjcmV0c3RvcmU6cmttczpFTnZfQ2FzZV9zZW5TaXRpdmVfdmFMVWU=
+kind: Secret
+metadata:
+  annotations:
+    rafay.dev/secretstore: rkms-secrets
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: 1ky77gk-cont-1-1ky-3721571733
+  namespace: ns-44784
+
+---
+apiVersion: v1
+data:
+  WORKLOAD_ID: 1ky77gk
+kind: ConfigMap
+metadata:
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: 1ky77gk-cont-2-1ky-2735633088
+  namespace: ns-44784
+
+---
+apiVersion: v1
+data:
+  test_robot_env_1: c2VjcmV0c3RvcmU6cmttczplbnZfdmFsdWVfMQ==
+  test_robot_env_2: c2VjcmV0c3RvcmU6cmttczpFTnZfQ2FzZV9zZW5TaXRpdmVfdmFMVWU=
+kind: Secret
+metadata:
+  annotations:
+    rafay.dev/secretstore: rkms-secrets
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: 1ky77gk-cont-2-1ky-2735633088
+  namespace: ns-44784
+
+---
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVYakNDQTBhZ0F3SUJBZ0lTQTErSW5TWVVmaGNVQ0hUaVk5eTJnbmVUTUEwR0NTcUdTSWIzRFFFQkN3VUEKTURJeEN6QUpCZ05WQkFZVEFsVlRNUll3RkFZRFZRUUtFdzFNWlhRbmN5QkZibU55ZVhCME1Rc3dDUVlEVlFRRApFd0pTTXpBZUZ3MHlNekEyTURjeE1qTXlNekZhRncweU16QTVNRFV4TWpNeU16QmFNQjB4R3pBWkJnTlZCQU1NCkVpb3VjV0Z6YVcxd2JHbG1hV1ZrTG1OdmJUQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJBbGwKSXdoZjJzVzVDU0M4T3RZUSsrVWhsK1J1S2pQV0YzS0pHRjd0eDQ1Z21iUjJadDZmUnJZSFJyaEh2RExJSERwMQpOdStVcHBpOUdnWWIveHdYSW1lamdnSk1NSUlDU0RBT0JnTlZIUThCQWY4RUJBTUNCNEF3SFFZRFZSMGxCQll3CkZBWUlLd1lCQlFVSEF3RUdDQ3NHQVFVRkJ3TUNNQXdHQTFVZEV3RUIvd1FDTUFBd0hRWURWUjBPQkJZRUZKQWUKL2Q0ZGJlbmdaU1ZqVzBSdFpjMHMrdUlLTUI4R0ExVWRJd1FZTUJhQUZCUXVzeGUzV0ZiTHJsQUpRT1lmcjUyTApGTUxHTUZVR0NDc0dBUVVGQndFQkJFa3dSekFoQmdnckJnRUZCUWN3QVlZVmFIUjBjRG92TDNJekxtOHViR1Z1ClkzSXViM0puTUNJR0NDc0dBUVVGQnpBQ2hoWm9kSFJ3T2k4dmNqTXVhUzVzWlc1amNpNXZjbWN2TUIwR0ExVWQKRVFRV01CU0NFaW91Y1dGemFXMXdiR2xtYVdWa0xtTnZiVEJNQmdOVkhTQUVSVEJETUFnR0JtZUJEQUVDQVRBMwpCZ3NyQmdFRUFZTGZFd0VCQVRBb01DWUdDQ3NHQVFVRkJ3SUJGaHBvZEhSd09pOHZZM0J6TG14bGRITmxibU55CmVYQjBMbTl5WnpDQ0FRTUdDaXNHQVFRQjFua0NCQUlFZ2ZRRWdmRUE3d0IxQUhveWpGVFl0eTIySU9vNDRGSWUKNllRV2NESVRoVTA3MGl2Qk9sZWpVdXRTQUFBQmlKWVBGeWdBQUFRREFFWXdSQUlnRXdZT1dkMlhzK0FpaGhTMgpIbndHNUNWdUd5dzRMa2ZRM2lMNm01N2x3c3dDSUZhT09MM3EwRVhjeG14M2k1b1R1VFNUQ1RFdDllcThIK1BnCmJqZTN3WjYyQUhZQTZEN1EyajcxQmpVeTUxY292SWxyeVFQVHk5RVJhK3pyYWVGM2ZXMEd2VzRBQUFHSWxnOFgKS1FBQUJBTUFSekJGQWlFQXBBMm1Sc1B3dFA4dVhWUEV4aE1JV1ZDMXVOS1BOczBCVzhqUmxMdGUwWFVDSUVpcwplU1p6WHNGbFZFMU9PTzhDeGpnNUJjNis5WEJkZUxwSW1hS0tUaExSTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCCkFRQlkxdUQ3RS9EcFhaM280Uk80UklBTzV2Y0piZTdqRE14Y0YwYVlhWjJEb3Y0d3hmWENxeG9DKzI0dnBNTXAKbnNzcXBrdE40bVptdmxhY2FEdTBqRW5LM1F4MFUzdE91Nk5CVE1PMTlhVkJSc2swTVFySXkybVVqYisrN21xQgpUTFd0YWpDdFB0QmpZQnVWN2FkOTh1ZVVhMDc3SUR1akNrNDIvM3lFK0lLSEN4MkhhSzZSZEpQbHpkRTh5a0ZRCkxGUloxa2M3dVNYeE52cG9nelhwTGxIeTZ4ZW81MzdMcWxJeHR3ejRFN0dzWWY0RUpyTnc5RjZHcjd3YnRrN1MKU1FZcXFCS0lvVlhGQTA0OHVSZHA1clNnODR5RDBYb0pnaGFBbUlxMkV5SDhnTEJjMU1qQ0tURUJwSHJFR1FDSQozb0VoQkFTaEFxV0tGaEtjcWJ4ZEdSaGIKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQ==
+  tls.key: c2VjcmV0c3RvcmU6cmttczotLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS0KTUlHSEFnRUFNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQkcwd2F3SUJBUVFndEQ4eFVJSzIxdk1qbFkrQgpWNFRBdDYrL1Vvc3JrQzkvaGw4VnpnS2ROR0doUkFOQ0FBUUpaU01JWDlyRnVRa2d2RHJXRVB2bElaZmtiaW96CjFoZHlpUmhlN2NlT1lKbTBkbWJlbjBhMkIwYTRSN3d5eUJ3NmRUYnZsS2FZdlJvR0cvOGNGeUpuCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=
+kind: Secret
+metadata:
+  annotations:
+    rafay.dev/secretstore: rkms-secrets
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: 1ky77gk-automation-255912877-ingress
+  namespace: ns-44784
+type: kubernetes.io/tls
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    rep-container: 1ky77gk-cont-1-1ky77gk
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-1-1ky77gk
+  namespace: ns-44784
+spec:
+  ports:
+  - name: port-80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: port-443-tcp
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    rep-app: cont-1-1ky77gk
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    rep-container: 1ky77gk-cont-2-1ky77gk
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-2-1ky77gk
+  namespace: ns-44784
+spec:
+  ports:
+  - name: port-80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: port-443-tcp
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    rep-app: cont-2-1ky77gk
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    rafay.dev/registry-4qkolkn: system-default-registry
+  labels:
+    rep-app: cont-1-1ky77gk
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-1-1ky77gk
+  namespace: ns-44784
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 300
+  selector:
+    matchLabels:
+      rep-app: cont-1-1ky77gk
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations: {}
+      labels:
+        rep-app: cont-1-1ky77gk
+        rep-organization: 7dkgjkx
+        rep-partner: rx28oml
+        rep-workload: 1ky77gk
+    spec:
+      containers:
+      - args: []
+        command: []
+        env:
+        - name: test_robot_env_1
+          valueFrom:
+            secretKeyRef:
+              key: test_robot_env_1
+              name: 1ky77gk-cont-1-1ky-3721571733
+        - name: test_robot_env_2
+          valueFrom:
+            secretKeyRef:
+              key: test_robot_env_2
+              name: 1ky77gk-cont-1-1ky-3721571733
+        envFrom: []
+        image: registry.dev.rafay-edge.net/rafaycommunity/rafaycommunityuser/testapp:v2.0
+        imagePullPolicy: IfNotPresent
+        name: cont-1-1ky77gk
+        ports:
+        - containerPort: 80
+          name: port-80-tcp
+          protocol: TCP
+        - containerPort: 443
+          name: port-443-tcp
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 250m
+            memory: 1024Mi
+          requests:
+            cpu: 237m
+            memory: 972Mi
+      dnsPolicy: ClusterFirstWithHostNet
+      restartPolicy: Always
+      tolerations: []
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    rafay.dev/registry-4qkolkn: system-default-registry
+  labels:
+    rep-app: cont-2-1ky77gk
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-2-1ky77gk
+  namespace: ns-44784
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 300
+  selector:
+    matchLabels:
+      rep-app: cont-2-1ky77gk
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations: {}
+      labels:
+        rep-app: cont-2-1ky77gk
+        rep-organization: 7dkgjkx
+        rep-partner: rx28oml
+        rep-workload: 1ky77gk
+    spec:
+      containers:
+      - args: []
+        command: []
+        env:
+        - name: test_robot_env_1
+          valueFrom:
+            secretKeyRef:
+              key: test_robot_env_1
+              name: 1ky77gk-cont-2-1ky-2735633088
+        - name: test_robot_env_2
+          valueFrom:
+            secretKeyRef:
+              key: test_robot_env_2
+              name: 1ky77gk-cont-2-1ky-2735633088
+        envFrom: []
+        image: registry.dev.rafay-edge.net/rafaycommunity/rafaycommunityuser/testapp:v2.0
+        imagePullPolicy: IfNotPresent
+        name: cont-2-1ky77gk
+        ports:
+        - containerPort: 80
+          name: port-80-tcp
+          protocol: TCP
+        - containerPort: 443
+          name: port-443-tcp
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 250m
+            memory: 1024Mi
+          requests:
+            cpu: 237m
+            memory: 972Mi
+      dnsPolicy: ClusterFirstWithHostNet
+      restartPolicy: Always
+      tolerations: []
+
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-1-1ky77gk
+  namespace: ns-44784
+spec:
+  maxReplicas: 2
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  - resource:
+      name: memory
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cont-1-1ky77gk
+
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    rep-organization: 7dkgjkx
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 1ky77gk
+  name: cont-2-1ky77gk
+  namespace: ns-44784
+spec:
+  maxReplicas: 2
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  - resource:
+      name: memory
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cont-2-1ky77gk
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/configuration-snippet: set $workload_name "rauto-workload-44784";set
+      $workloadId "1ky77gk";set $orgId "7dkgjkx";set $partnerId "rx28oml";
+    rafay.dev/cname: automation-44784-qasimplified-com.Team Rafay
+    rafay.dev/dns: 'true'
+    rafay.dev/kubeVersionConstraint: '>=1.19.0'
+  name: 1ky77gk-automation-44784-qasimplified-com-http
+  namespace: ns-44784
+spec:
+  rules:
+  - host: automation-44784.qasimplified.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: cont-1-1ky77gk
+            port:
+              number: 80
+        path: /get
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: cont-2-1ky77gk
+            port:
+              number: 80
+        path: /ip
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - automation-44784.qasimplified.com
+    secretName: 1ky77gk-automation-255912877-ingress
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/configuration-snippet: set $workload_name "rauto-workload-44784";set
+      $workloadId "1ky77gk";set $orgId "7dkgjkx";set $partnerId "rx28oml";
+    rafay.dev/cname: automation-44784-qasimplified-com.Team Rafay
+    rafay.dev/dns: 'true'
+    rafay.dev/kubeVersionConstraint: <1.19.0
+  name: 1ky77gk-automation-44784-qasimplified-com-http
+  namespace: ns-44784
+spec:
+  rules:
+  - host: automation-44784.qasimplified.com
+    http:
+      paths:
+      - backend:
+          serviceName: cont-1-1ky77gk
+          servicePort: 80
+        path: /get
+      - backend:
+          serviceName: cont-2-1ky77gk
+          servicePort: 80
+        path: /ip
+  tls:
+  - hosts:
+    - automation-44784.qasimplified.com
+    secretName: 1ky77gk-automation-255912877-ingress

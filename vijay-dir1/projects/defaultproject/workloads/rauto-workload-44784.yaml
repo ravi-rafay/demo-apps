@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rauto-workload-44784
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rauto-workload-44784/rauto-workload-44784.yaml
+    type: Yaml
+  namespace: ns-44784
+  placement:
+    selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
+  version: rauto-workload-44784-v1-202307141703460000
