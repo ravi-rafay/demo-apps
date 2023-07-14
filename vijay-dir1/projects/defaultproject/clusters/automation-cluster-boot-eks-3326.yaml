@@ -2,7 +2,6 @@ apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
   labels:
-    edit: edit_200937981
     rauto: label
   name: automation-cluster-boot-eks-3326
   project: defaultproject
