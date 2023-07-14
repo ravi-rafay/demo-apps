@@ -1,7 +1,7 @@
 apiVersion: apps.k8smgmt.io/v3
 kind: Workload
 metadata:
-  name: rauto-workload-326069
+  name: rauto-workload-31932
   project: defaultproject
 spec:
   artifact:
@@ -11,9 +11,9 @@ spec:
       repository: rauto-git-repo
       revision: rauto-pipeline-test
       valuesPaths:
-      - name: workloads/helm3/nginx/nginx-values-326069.yaml
+      - name: workloads/helm3/nginx/nginx-values-31932.yaml
     type: Helm
-  namespace: rauto-namespace-326069
+  namespace: rauto-namespace-31932
   placement:
     selector: rafay.dev/clusterName=automation-cluster-boot-eks-3326
-  version: rauto-workload-326069-v1-202307142105560000
+  version: rauto-workload-31932-v1-202307142107020000
