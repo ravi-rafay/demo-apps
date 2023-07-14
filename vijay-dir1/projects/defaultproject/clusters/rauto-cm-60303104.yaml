@@ -1,0 +1,71 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: rauto-cm-60303104
+  project: defaultproject
+spec:
+  blueprintConfig:
+    name: default
+  cloudCredentials: rauto_16734
+  config:
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceType: t3a.xlarge
+      maxSize: 2
+      minSize: 2
+      name: rauto-ng-60303104
+      version: "1.26"
+      volumeSize: 80
+      volumeType: gp2
+    metadata:
+      name: rauto-cm-60303104
+      region: us-west-2
+      tags:
+        email: automation@rafay.co
+        env: automation
+      version: "1.26"
+    network:
+      cni:
+        name: aws-cni
+        params:
+          customCniCrdSpec:
+            us-west-2a:
+            - subnet: subnet-0c6b32f48edd4ac87
+            us-west-2b:
+            - subnet: subnet-0e988c39c2cfa14dc
+            us-west-2c:
+            - subnet: subnet-0c3190a83df25c4b9
+            us-west-2d:
+            - subnet: subnet-0062db745aede8121
+    vpc:
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: false
+      nat:
+        gateway: Single
+      subnets:
+        private:
+          subnet-00cfc631aa74a1fd7:
+            id: subnet-00cfc631aa74a1fd7
+          subnet-075ad56bbc0c40234:
+            id: subnet-075ad56bbc0c40234
+          subnet-0ebca6b22e5dbaa00:
+            id: subnet-0ebca6b22e5dbaa00
+          subnet-0f0420bd80fe3895b:
+            id: subnet-0f0420bd80fe3895b
+        public:
+          subnet-00a8c57a0742a764a:
+            id: subnet-00a8c57a0742a764a
+          subnet-057940d7e14a5ab3f:
+            id: subnet-057940d7e14a5ab3f
+          subnet-05a6035152b10bbe8:
+            id: subnet-05a6035152b10bbe8
+          subnet-0ab160d6a20f1aff3:
+            id: subnet-0ab160d6a20f1aff3
+  proxyConfig: {}
+  type: aws-eks
