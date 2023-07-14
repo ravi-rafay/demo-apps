@@ -1,9 +1,0 @@
-apiVersion: apps.k8smgmt.io/v3
-kind: Catalog
-metadata:
-  name: rauto-catalog-86199
-  project: defaultproject
-spec:
-  autoSync: true
-  repository: rauto-helm-repo
-  type: HelmRepository
