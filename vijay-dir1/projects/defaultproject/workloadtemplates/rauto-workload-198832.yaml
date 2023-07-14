@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: rauto-workload-198832
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: workloads/native_yaml/nginx_webserver/nginx.yaml
+      repository: rauto-git-repo
+      revision: master
+    options: {}
+    type: Yaml
