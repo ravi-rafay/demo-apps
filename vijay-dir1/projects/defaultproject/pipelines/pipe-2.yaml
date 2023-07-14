@@ -4,6 +4,7 @@ metadata:
   name: pipe-2
   project: defaultproject
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
