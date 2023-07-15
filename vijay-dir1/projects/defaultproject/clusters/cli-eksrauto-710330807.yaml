@@ -8,6 +8,9 @@ spec:
     name: default
   cloudCredentials: cli-cprauto-710330807
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     metadata:
       name: cli-eksrauto-710330807
       region: us-east-1
