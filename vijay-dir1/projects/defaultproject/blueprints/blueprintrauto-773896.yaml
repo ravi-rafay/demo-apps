@@ -1,0 +1,26 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: blueprintrauto-773896
+  project: defaultproject
+spec:
+  base:
+    name: default
+    version: 1.27.0
+  customAddons:
+  - name: addonrauto-773896
+    version: v1
+  - dependsOn:
+    - addonrauto-773896
+    name: addonrauto-one-773896
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  type: custom
+  version: v1
