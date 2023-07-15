@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: For rauto testing
+  name: addonrauto-one-773896
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/addonrauto-one-773896/nginx.yaml
+    type: Yaml
+  namespace: rauto-ns-one-773896
+  sharing: {}
+  version: v1
