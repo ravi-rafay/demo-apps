@@ -29,10 +29,10 @@ spec:
         name: aws-cni
     nodeGroups:
     - amiFamily: WindowsServer2019FullContainer
-      desiredCapacity: 3
+      desiredCapacity: 0
       instanceType: t3a.xlarge
       maxSize: 3
-      minSize: 1
+      minSize: 0
       name: rauto-ng-win-22229514
       tags:
         email: automation@rafay.co
