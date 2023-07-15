@@ -8,6 +8,9 @@ spec:
     name: default
   cloudCredentials: cli-cprauto-422715822
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
@@ -20,7 +23,7 @@ spec:
       tags:
         email: automation@rafay.co
         env: automation
-      version: "1.24"
+      version: "1.25"
     nodeGroups:
     - desiredCapacity: 1
       instanceType: t3.xlarge

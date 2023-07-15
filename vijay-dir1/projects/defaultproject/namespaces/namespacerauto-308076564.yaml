@@ -4,7 +4,7 @@ metadata:
   annotations:
     a1: v3
     a2: v4
-  name: rauto-ns-773896
+  name: namespacerauto-308076564
   project: defaultproject
 spec:
   limitRange: {}
@@ -13,5 +13,5 @@ spec:
   placement:
     labels:
     - key: rafay.dev/clusterName
-      value: rauto-rancher-4153
+      value: automation-cluster-boot-eks-3326
   resourceQuotas: {}
