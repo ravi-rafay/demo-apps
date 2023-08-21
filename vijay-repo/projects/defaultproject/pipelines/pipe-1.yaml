@@ -1,0 +1,30 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipe-1
+  project: defaultproject
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: vijay-repo
+        repository: simha-repo
+        revision: master
+      systemToGitSync: true
+    name: stage-1
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: simha-repo
+        revision: master
+    name: stage
+    type: Webhook
