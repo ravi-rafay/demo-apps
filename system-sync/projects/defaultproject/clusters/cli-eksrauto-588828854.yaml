@@ -36,7 +36,7 @@ spec:
       maxSize: 1
       minSize: 1
       name: cli-ngrauto-first-588828854
-      version: "1.24"
+      version: "1.25"
     vpc:
       cidr: 192.168.0.0/16
       clusterEndpoints:
