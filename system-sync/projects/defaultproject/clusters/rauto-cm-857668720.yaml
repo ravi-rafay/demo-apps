@@ -43,6 +43,21 @@ spec:
       volumeSize: 80
       volumeType: gp2
     - amiFamily: Ubuntu2004
+      availabilityZones:
+      - us-east-1-wl1-atl-wlz-1
+      desiredCapacity: 2
+      instanceType: t3.xlarge
+      maxSize: 2
+      minSize: 2
+      name: rauto-ngwl-389044837
+      privateNetworking: true
+      subnetCidr: 192.168.206.0/24
+      tags:
+        email: automation@rafay.co
+        env: automation
+      volumeSize: 80
+      volumeType: gp2
+    - amiFamily: Ubuntu2004
       desiredCapacity: 2
       iam:
         withAddonPolicies:
