@@ -8,6 +8,9 @@ spec:
     name: default
   cloudCredentials: rauto_3435
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     metadata:
       name: rauto-eks-440156963
       region: us-east-1
