@@ -1,16 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-cm-839519515
+  name: rauto-cm-595751970
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rauto-cp-839519515
+  cloudCredentials: rauto_96414
   config:
-    addons:
-    - name: aws-ebs-csi-driver
-      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
@@ -18,7 +15,7 @@ spec:
     - us-east-1d
     - us-east-1f
     metadata:
-      name: rauto-cm-839519515
+      name: rauto-cm-595751970
       region: us-east-1
       tags:
         email: automation@rafay.co
@@ -28,7 +25,7 @@ spec:
       cni:
         name: aws-cni
     nodeGroups:
-    - ami: ami-03c47d65a5cb0df3b
+    - ami: ami-075756de6a096f7df
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -37,11 +34,11 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng1-839519515
-      overrideBootstrapCommand: '| [Bottlerocket]'
+      name: rauto-ng1-595751970
+      overrideBootstrapCommand: null
       volumeSize: 80
       volumeType: gp2
-    - ami: ami-03c47d65a5cb0df3b
+    - ami: ami-075756de6a096f7df
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -50,8 +47,8 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng2-839519515
-      overrideBootstrapCommand: '| [Bottlerocket]'
+      name: rauto-ng2-595751970
+      overrideBootstrapCommand: null
       volumeSize: 80
       volumeType: gp2
     vpc:
