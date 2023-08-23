@@ -42,13 +42,13 @@ spec:
       volumeType: gp2
     - ami: auto-ssm
       amiFamily: Bottlerocket
-      desiredCapacity: 2
+      desiredCapacity: 3
       iam:
         withAddonPolicies:
           autoScaler: true
           imageBuilder: true
       instanceType: t3a.xlarge
-      maxSize: 2
+      maxSize: 3
       minSize: 2
       name: rauto-ng2-286286482
       overrideBootstrapCommand: null
