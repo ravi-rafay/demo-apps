@@ -1,59 +1,59 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-import-4071
+  name: rauto-import-4468
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
     version: latest
-  cloudCredentials: rauto_98230
+  cloudCredentials: rauto_61217
   config:
     availabilityZones:
-    - us-east-1a
+    - us-east-1d
     - us-east-1f
     iam:
-      serviceRoleARN: arn:aws:iam::679196758854:role/eksctl-rauto-import-4071-cluster-ServiceRole-1LTJ2OHDV5WAW
+      serviceRoleARN: arn:aws:iam::679196758854:role/eksctl-rauto-import-4468-cluster-ServiceRole-15IN8PP81FEEL
     managedNodeGroups:
     - amiFamily: AmazonLinux2
       availabilityZones:
-      - us-east-1a
+      - us-east-1d
       - us-east-1f
-      desiredCapacity: 3
+      desiredCapacity: 2
       instanceType: t3a.xlarge
       labels:
-        alpha.eksctl.io/cluster-name: rauto-import-4071
+        alpha.eksctl.io/cluster-name: rauto-import-4468
         alpha.eksctl.io/nodegroup-name: rauto-ng
-      maxSize: 3
+      maxSize: 2
       minSize: 2
       name: rauto-ng
       securityGroups:
         attachIDs:
-        - sg-0bfc782eda6ba98ca
+        - sg-034bf8a8879c62dc9
       subnets:
-      - subnet-0625b1b54abb8f000
-      - subnet-049a7d5270c1df9b0
+      - subnet-040024d099825ed17
+      - subnet-0c1121e3442b61d0b
       tags:
-        Name: eksctl-rauto-import-4071-cluster/ControlPlane
-        alpha.eksctl.io/cluster-name: rauto-import-4071
+        Name: eksctl-rauto-import-4468-cluster/ControlPlane
+        alpha.eksctl.io/cluster-name: rauto-import-4468
         alpha.eksctl.io/cluster-oidc-enabled: "false"
         alpha.eksctl.io/eksctl-version: 0.145.0
         alpha.eksctl.io/nodegroup-name: rauto-ng
         alpha.eksctl.io/nodegroup-type: managed
-        eksctl.cluster.k8s.io/v1alpha1/cluster-name: rauto-import-4071
+        eksctl.cluster.k8s.io/v1alpha1/cluster-name: rauto-import-4468
         email: automation@rafay.co
         env: automation
       volumeSize: 80
       volumeType: gp3
     metadata:
-      name: rauto-import-4071
+      name: rauto-import-4468
       region: us-east-1
       tags:
-        Name: eksctl-rauto-import-4071-cluster/ControlPlane
-        alpha.eksctl.io/cluster-name: rauto-import-4071
+        Name: eksctl-rauto-import-4468-cluster/ControlPlane
+        alpha.eksctl.io/cluster-name: rauto-import-4468
         alpha.eksctl.io/cluster-oidc-enabled: "false"
         alpha.eksctl.io/eksctl-version: 0.145.0
-        eksctl.cluster.k8s.io/v1alpha1/cluster-name: rauto-import-4071
+        eksctl.cluster.k8s.io/v1alpha1/cluster-name: rauto-import-4468
         email: automation@rafay.co
         env: automation
       version: "1.25"
@@ -65,17 +65,17 @@ spec:
       clusterEndpoints:
         privateAccess: false
         publicAccess: true
-      id: vpc-0cb79c1444aa0459e
-      securityGroup: sg-052db4a56ea78e506
+      id: vpc-0acf754ab1049389b
+      securityGroup: sg-031d59d6dd337e5b9
       subnets:
         private:
-          subnet-003a4d7a1b2b136a4:
-            id: subnet-003a4d7a1b2b136a4
-          subnet-0d20390b1af11a4c5:
-            id: subnet-0d20390b1af11a4c5
+          subnet-06446ec5d96944132:
+            id: subnet-06446ec5d96944132
+          subnet-09865c8c3ccdf6682:
+            id: subnet-09865c8c3ccdf6682
         public:
-          subnet-049a7d5270c1df9b0:
-            id: subnet-049a7d5270c1df9b0
-          subnet-0625b1b54abb8f000:
-            id: subnet-0625b1b54abb8f000
+          subnet-040024d099825ed17:
+            id: subnet-040024d099825ed17
+          subnet-0c1121e3442b61d0b:
+            id: subnet-0c1121e3442b61d0b
   type: aws-eks
