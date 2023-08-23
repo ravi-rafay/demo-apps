@@ -56,4 +56,6 @@ spec:
           subnet-0d6857db67a6722ef:
             id: subnet-0d6857db67a6722ef
   proxyConfig: {}
+  sharing:
+    enabled: true
   type: aws-eks
