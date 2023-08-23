@@ -23,7 +23,7 @@ spec:
       tags:
         email: automation@rafay.co
         env: automation
-      version: "1.24"
+      version: "1.25"
     network:
       cni:
         name: aws-cni
