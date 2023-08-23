@@ -8,6 +8,9 @@ spec:
     name: default
   cloudCredentials: cli-cprauto-588828854
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
@@ -26,13 +29,13 @@ spec:
       instanceType: t3.xlarge
       maxSize: 1
       minSize: 1
-      name: cli-ngrauto-first-588828854
+      name: cli-ngrauto-second-588828854
       version: "1.24"
     - desiredCapacity: 1
       instanceType: t3.xlarge
       maxSize: 1
       minSize: 1
-      name: cli-ngrauto-second-588828854
+      name: cli-ngrauto-first-588828854
       version: "1.24"
     vpc:
       cidr: 192.168.0.0/16
