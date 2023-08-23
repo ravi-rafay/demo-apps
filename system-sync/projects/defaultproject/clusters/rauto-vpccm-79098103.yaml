@@ -8,6 +8,9 @@ spec:
     name: default
   cloudCredentials: rauto_88572
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     managedNodeGroups:
     - ami: ami-05281fd537dda5581
       desiredCapacity: 2
