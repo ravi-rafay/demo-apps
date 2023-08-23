@@ -55,7 +55,7 @@ spec:
       minSize: 2
       name: rauto-ng1-857668720
       overrideBootstrapCommand: null
-      version: "1.24"
+      version: "1.25"
       volumeSize: 80
       volumeType: gp2
     - amiFamily: Ubuntu2004
