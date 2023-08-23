@@ -30,9 +30,9 @@ spec:
     nodeGroups:
     - ami: auto-ssm
       amiFamily: Bottlerocket
-      desiredCapacity: 0
+      desiredCapacity: 4
       instanceType: t3a.xlarge
-      maxSize: 1
+      maxSize: 4
       minSize: 0
       name: rauto-ng-bottlerocket-506237033
       tags:
