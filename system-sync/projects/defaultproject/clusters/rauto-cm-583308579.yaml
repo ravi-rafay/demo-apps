@@ -25,7 +25,7 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng1-583308579
+      name: rauto-ng2-583308579
       overrideBootstrapCommand: null
       version: "1.24"
       volumeSize: 80
@@ -39,7 +39,7 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng2-583308579
+      name: rauto-ng1-583308579
       overrideBootstrapCommand: null
       version: "1.24"
       volumeSize: 80
