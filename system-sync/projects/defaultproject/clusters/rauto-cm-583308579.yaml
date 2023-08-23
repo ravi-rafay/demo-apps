@@ -9,6 +9,9 @@ spec:
     version: v1
   cloudCredentials: rauto_56062
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
