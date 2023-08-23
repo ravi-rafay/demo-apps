@@ -1,0 +1,45 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: simha-aug23-eks
+  project: defaultproject
+spec:
+  blueprintConfig:
+    name: default
+    version: Latest
+  cloudCredentials: simha-aws
+  config:
+    metadata:
+      name: simha-aug23-eks
+      region: us-west-2
+      tags:
+        email: vijay@rafay.co
+        env: qa
+      version: "1.24"
+    network:
+      cni:
+        name: aws-cni
+    nodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      instancesDistribution:
+        instanceTypes:
+        - t3.xlarge
+      maxSize: 2
+      minSize: 1
+      name: simha-aug23-eks-ng
+      ssh:
+        allow: true
+        publicKeyName: aws-abi-key
+      version: "1.24"
+      volumeSize: 80
+      volumeType: gp3
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: true
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  type: aws-eks
