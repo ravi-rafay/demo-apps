@@ -1,24 +1,15 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rauto-cm-576578704
+  name: rauto-vpccm-79098103
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rauto_76452
+  cloudCredentials: rauto_88572
   config:
-    addons:
-    - name: aws-ebs-csi-driver
-      version: latest
-    availabilityZones:
-    - us-east-1a
-    - us-east-1b
-    - us-east-1c
-    - us-east-1d
-    - us-east-1f
     managedNodeGroups:
-    - amiFamily: Bottlerocket
+    - ami: ami-05281fd537dda5581
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -27,12 +18,11 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng2-576578704
-      overrideBootstrapCommand: null
-      version: "1.25"
+      name: rauto-ng1-79098103
+      overrideBootstrapCommand: '| [Ubuntu]'
       volumeSize: 80
       volumeType: gp2
-    - amiFamily: Bottlerocket
+    - ami: ami-05281fd537dda5581
       desiredCapacity: 2
       iam:
         withAddonPolicies:
@@ -41,13 +31,12 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng1-576578704
-      overrideBootstrapCommand: null
-      version: "1.25"
+      name: rauto-ng2-79098103
+      overrideBootstrapCommand: '| [Ubuntu]'
       volumeSize: 80
       volumeType: gp2
     metadata:
-      name: rauto-cm-576578704
+      name: rauto-vpccm-79098103
       region: us-east-1
       tags:
         email: automation@rafay.co
@@ -57,11 +46,21 @@ spec:
       cni:
         name: aws-cni
     vpc:
-      cidr: 192.168.0.0/16
       clusterEndpoints:
         privateAccess: true
         publicAccess: false
       nat:
         gateway: Single
+      subnets:
+        private:
+          subnet-0205849a93dc1a7c8:
+            id: subnet-0205849a93dc1a7c8
+          subnet-0c1955c9a5c78d0d2:
+            id: subnet-0c1955c9a5c78d0d2
+        public:
+          subnet-07de918da939fb783:
+            id: subnet-07de918da939fb783
+          subnet-0d6857db67a6722ef:
+            id: subnet-0d6857db67a6722ef
   proxyConfig: {}
   type: aws-eks
