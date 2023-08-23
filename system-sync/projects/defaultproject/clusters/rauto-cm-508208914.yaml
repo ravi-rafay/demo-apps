@@ -20,10 +20,10 @@ spec:
     - us-east-1f
     managedNodeGroups:
     - amiFamily: Ubuntu2004
-      desiredCapacity: 1
+      desiredCapacity: 0
       instanceType: t3a.xlarge
       maxSize: 1
-      minSize: 1
+      minSize: 0
       name: rauto-ng-381708303
       tags:
         email: automation@rafay.co
