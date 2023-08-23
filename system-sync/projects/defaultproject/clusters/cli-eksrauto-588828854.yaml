@@ -30,7 +30,7 @@ spec:
       maxSize: 1
       minSize: 1
       name: cli-ngrauto-second-588828854
-      version: "1.24"
+      version: "1.25"
     - desiredCapacity: 1
       instanceType: t3.xlarge
       maxSize: 1
