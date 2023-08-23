@@ -29,20 +29,6 @@ spec:
         name: aws-cni
     nodeGroups:
     - amiFamily: Ubuntu2004
-      desiredCapacity: 2
-      iam:
-        withAddonPolicies:
-          autoScaler: true
-          imageBuilder: true
-      instanceType: t3a.xlarge
-      maxSize: 2
-      minSize: 2
-      name: rauto-ng1-857668720
-      overrideBootstrapCommand: null
-      version: "1.24"
-      volumeSize: 80
-      volumeType: gp2
-    - amiFamily: Ubuntu2004
       availabilityZones:
       - us-east-1-wl1-atl-wlz-1
       desiredCapacity: 2
@@ -67,9 +53,23 @@ spec:
       instanceType: t3a.xlarge
       maxSize: 2
       minSize: 2
-      name: rauto-ng2-857668720
+      name: rauto-ng1-857668720
       overrideBootstrapCommand: null
       version: "1.24"
+      volumeSize: 80
+      volumeType: gp2
+    - amiFamily: Ubuntu2004
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceType: t3a.xlarge
+      maxSize: 2
+      minSize: 2
+      name: rauto-ng2-857668720
+      overrideBootstrapCommand: null
+      version: "1.25"
       volumeSize: 80
       volumeType: gp2
     vpc:
