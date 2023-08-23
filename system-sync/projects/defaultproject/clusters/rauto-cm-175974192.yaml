@@ -18,20 +18,7 @@ spec:
     - us-east-1d
     - us-east-1f
     iam:
-      serviceAccounts:
-      - attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
-        - arn:aws:iam::aws:policy/AmazonS3FullAccess
-        metadata:
-          annotations:
-            irsa: rauto-377926545
-          labels:
-            irsalabel: rauto-377926545
-          name: rauto-irsa-21522
-          namespace: namespace-377926545
-        tags:
-          awstag: rauto-irsa-377926545
-          irsatag: rauto-377926545
+      serviceAccounts: []
       withOIDC: true
     metadata:
       name: rauto-cm-175974192
@@ -59,13 +46,13 @@ spec:
       volumeSize: 80
       volumeType: gp2
     - amiFamily: AmazonLinux2
-      desiredCapacity: 2
+      desiredCapacity: 4
       iam:
         withAddonPolicies:
           autoScaler: true
           imageBuilder: true
       instanceType: t3a.xlarge
-      maxSize: 2
+      maxSize: 4
       minSize: 2
       name: rauto-ng1-175974192
       overrideBootstrapCommand: null
