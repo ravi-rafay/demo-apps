@@ -29,6 +29,13 @@ spec:
     nodeGroups:
     - desiredCapacity: 1
       instanceType: t3.xlarge
+      name: eksngrauto-774894920
+      tags:
+        email: automation@rafay.co
+        env: automation
+      version: "1.25"
+    - desiredCapacity: 1
+      instanceType: t3.xlarge
       maxSize: 1
       minSize: 1
       name: cli-ngrauto-second-588828854
