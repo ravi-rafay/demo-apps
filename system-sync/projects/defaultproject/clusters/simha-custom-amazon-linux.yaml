@@ -9,6 +9,9 @@ spec:
     version: 1.26.0
   cloudCredentials: simha-aws
   config:
+    addons:
+    - name: aws-ebs-csi-driver
+      version: latest
     managedNodeGroups:
     - ami: ami-0420188c74f27b99d
       desiredCapacity: 1
