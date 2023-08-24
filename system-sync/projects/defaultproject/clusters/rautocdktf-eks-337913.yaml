@@ -1,16 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: rautocdktf-eks-266070
+  name: rautocdktf-eks-337913
   project: defaultproject
 spec:
   blueprintConfig:
     name: default
-  cloudCredentials: rautocdktf-cloudp-266070
+  cloudCredentials: rautocdktf-cloudp-337913
   config:
-    addons:
-    - name: aws-ebs-csi-driver
-      version: latest
     availabilityZones:
     - us-east-1a
     - us-east-1b
@@ -18,7 +15,7 @@ spec:
     - us-east-1d
     - us-east-1f
     metadata:
-      name: rautocdktf-eks-266070
+      name: rautocdktf-eks-337913
       region: us-east-1
       tags:
         email: automation@rafay.co
@@ -28,25 +25,7 @@ spec:
       cni:
         name: aws-cni
     nodeGroups:
-    - ami: ami-05281fd537dda5581
-      desiredCapacity: 1
-      disableIMDSv1: false
-      disablePodIMDS: false
-      ebsOptimized: false
-      efaEnabled: false
-      enableDetailedMonitoring: false
-      instanceType: t3a.xlarge
-      maxSize: 2
-      minSize: 1
-      name: rauto-ng01
-      overrideBootstrapCommand: '[Ubuntu]'
-      privateNetworking: false
-      volumeEncrypted: false
-      volumeIOPS: 3000
-      volumeSize: 80
-      volumeThroughput: 125
-      volumeType: gp3
-    - ami: ami-05281fd537dda5581
+    - amiFamily: Ubuntu2004
       desiredCapacity: 1
       disableIMDSv1: false
       disablePodIMDS: false
@@ -57,8 +36,26 @@ spec:
       maxSize: 2
       minSize: 1
       name: rauto-ng0
-      overrideBootstrapCommand: '[Ubuntu]'
       privateNetworking: false
+      version: "1.25"
+      volumeEncrypted: false
+      volumeIOPS: 3000
+      volumeSize: 80
+      volumeThroughput: 125
+      volumeType: gp3
+    - amiFamily: Ubuntu2004
+      desiredCapacity: 1
+      disableIMDSv1: false
+      disablePodIMDS: false
+      ebsOptimized: false
+      efaEnabled: false
+      enableDetailedMonitoring: false
+      instanceType: t3a.xlarge
+      maxSize: 2
+      minSize: 1
+      name: rauto-ng01
+      privateNetworking: false
+      version: "1.25"
       volumeEncrypted: false
       volumeIOPS: 3000
       volumeSize: 80
