@@ -52,7 +52,7 @@ spec:
       name: rauto-ngmanaged01
       privateNetworking: false
       spot: false
-      version: "1.24"
+      version: "1.25"
       volumeEncrypted: false
       volumeIOPS: 3000
       volumeSize: 80
