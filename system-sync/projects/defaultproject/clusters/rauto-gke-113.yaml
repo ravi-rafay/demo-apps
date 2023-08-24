@@ -9,7 +9,7 @@ spec:
     version: latest
   cloudCredentials: rauto-gke-cp-113
   config:
-    controlPlaneVersion: "1.23"
+    controlPlaneVersion: "1.24"
     gcpProject: qa-automation-371111
     location:
       config:
