@@ -53,6 +53,6 @@ spec:
         imageType: COS_CONTAINERD
         machineType: e2-medium
       name: rauto-ng-1549
-      nodeVersion: "1.23"
+      nodeVersion: "1.24"
       size: 2
   type: gke
