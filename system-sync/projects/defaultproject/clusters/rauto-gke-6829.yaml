@@ -47,5 +47,9 @@ spec:
       name: second-nodepool
       nodeVersion: "1.23"
       size: 1
-  sharing: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: rauto-proj-gke-28108
+    - name: rauto-proj-gke-41633
   type: gke
