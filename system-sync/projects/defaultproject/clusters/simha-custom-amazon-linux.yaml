@@ -6,7 +6,7 @@ metadata:
 spec:
   blueprintConfig:
     name: default
-    version: Latest
+    version: 1.26.0
   cloudCredentials: simha-aws
   config:
     managedNodeGroups:
