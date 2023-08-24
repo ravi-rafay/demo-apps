@@ -47,12 +47,4 @@ spec:
       name: second-nodepool
       nodeVersion: "1.23"
       size: 1
-    - machineConfig:
-        bootDiskSize: 100
-        bootDiskType: pd-standard
-        imageType: COS_CONTAINERD
-        machineType: e2-medium
-      name: rauto-ng-1549
-      nodeVersion: "1.24"
-      size: 2
   type: gke
