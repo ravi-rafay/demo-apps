@@ -47,8 +47,5 @@ spec:
       name: second-nodepool
       nodeVersion: "1.23"
       size: 1
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
+  sharing: {}
   type: gke
