@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: blueprint-1
+  project: defaultproject
+spec:
+  type: custom
