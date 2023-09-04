@@ -5,7 +5,12 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/addon-1/redis-17.3.11.tgz
+      valuesPaths:
+      - name: file://artifacts/addon-1/yamlworkload4084.yaml
     type: Helm
   namespace: default-simha-qa
   sharing: {}
+  version: v1
