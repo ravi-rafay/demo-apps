@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rauto-addon-483716231
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/rauto-addon-483716231/nginx-9.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/rauto-addon-483716231/helmworkload41309.yaml
+      - name: file://artifacts/rauto-addon-483716231/helmworkload38547.yaml
+      - name: file://artifacts/rauto-addon-483716231/helmworkload95687.yaml
+    type: Helm
+  namespace: default-eaas-controller
+  sharing: {}
+  version: v1
