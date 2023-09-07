@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rautohelm-addon-187700
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: workloads/helm3/nginx/nginx-9.4.2.tgz
+      repository: rauto-git-repo
+      revision: master
+    options:
+      timeout: 0s
+    type: Helm
+  namespace: default-eaas-controller
+  sharing: {}
+  version: v2.0

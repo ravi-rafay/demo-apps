@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rautoyaml-addon-187700
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: addons/yaml_workloads/addon-kong.yaml
+      repository: rauto-git-repo
+      revision: master
+    options: {}
+    type: Yaml
+  namespace: default-eaas-controller
+  sharing: {}
+  version: v2.0
