@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rauto-addon-4406665
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rauto-addon-4406665/rauto-addon-4406665.yaml
+    type: Yaml
+  namespace: default-eaas-controller
+  sharing: {}
+  version: v1
