@@ -37,7 +37,7 @@ spec:
       ssh:
         allow: true
         publicKeyName: aws-abi-key
-      version: "1.24"
+      version: "1.25"
       volumeSize: 80
       volumeType: gp3
     vpc:
