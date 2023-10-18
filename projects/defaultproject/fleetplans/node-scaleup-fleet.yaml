@@ -18,7 +18,7 @@ spec:
         name: node-scaleup-fleet
         patchConfig:
         - op: replace
-          path: .spec.config.managedNodeGroups[0].desiredCapacity
+          path: .spec.config.nodeGroups[0].desiredCapacity
           value: 3
         type: patch
       name: node-scaleup-fleet
