@@ -35,7 +35,7 @@ spec:
       tags:
         email: vijay@rafay.co
         env: qa
-      version: "1.25"
+      version: "1.26"
     network:
       cni:
         name: Calico-v3.24.5
