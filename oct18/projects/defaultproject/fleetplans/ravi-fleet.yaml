@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: FleetPlan
+metadata:
+  name: ravi-fleet
+  project: defaultproject
+spec:
+  
