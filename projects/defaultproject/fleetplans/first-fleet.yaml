@@ -20,21 +20,9 @@ spec:
         description: cp-ng-upgrade
         name: cp-ng-upgrade
         nodeGroupsAndControlPlaneUpgradeConfig:
-          version: "1.25"
+          version: "1.26"
         type: nodeGroupsAndControlPlaneUpgrade
       name: cp-ng-upgrade
-      posthooks:
-      - containerConfig:
-          arguments:
-          - get
-          - pods
-          - -A
-          image: bitnami/kubectl
-          runner:
-            type: cluster
-        inject:
-        - KUBECONFIG
-        name: posthook
       prehooks:
       - containerConfig:
           arguments:
@@ -47,3 +35,14 @@ spec:
         inject:
         - KUBECONFIG
         name: prehook
+      - containerConfig:
+          arguments:
+          - get
+          - pods
+          - -A
+          image: bitnami/kubectl
+          runner:
+            type: cluster
+        inject:
+        - KUBECONFIG
+        name: second-prehook
